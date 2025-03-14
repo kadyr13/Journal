@@ -62,3 +62,21 @@ footer {
     text-align: center;
     padding: 10px 0;
 }
+
+.archive-list {
+    list-style: none;
+    padding: 0;
+}
+
+.archive-list li {
+    margin: 10px 0;
+}
+
+.archive-list li a {
+    color: #333;
+    text-decoration: none;
+}
+
+.archive-list li a:hover {
+    text-decoration: underline;
+}
