@@ -1,1 +1,1 @@
-// Add your JavaScript here
+// Add any interactive JavaScript here
