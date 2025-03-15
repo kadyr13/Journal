@@ -1,1 +1,1 @@
-// Add any interactive JavaScript here
+// JavaScript code will go here
