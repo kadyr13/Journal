@@ -1,8 +1,13 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    background-color: #ffffff; /* Set the background color to white */
+    overflow-y: scroll; /* Ensure vertical scrollbar is always present */
 }
 
 .container {
@@ -12,57 +17,63 @@ body {
 }
 
 header {
-    background: #333;
-    color: #fff;
+    background: #ffffff; /* Set header background to white */
+    color: #333;
     padding: 20px 0;
+    display: flex; /* Ensures header uses flexbox for alignment */
+    align-items: center; /* Align items in the center vertically */
+    justify-content: space-between; /* Space out logo and nav */
 }
 
 header .logo img {
-    height: 50px;
-}
-
-header nav {
-    float: right;
+    height: auto;
+    max-height: 50px; /* Ensures the logo is not too large */
+    width: auto; /* Keeps the image aspect ratio */
+    padding: 5px; /* Adds some spacing around the logo */
 }
 
 header nav ul {
     list-style: none;
     margin: 0;
     padding: 0;
+    display: flex; /* Ensures the list items are displayed inline */
+    justify-content: flex-end; /* Align navigation items to the right */
+    flex-grow: 1; /* Allow the nav to grow and take available space */
 }
 
 header nav ul li {
-    display: inline;
     margin-left: 20px;
 }
 
 header nav ul li a {
-    color: #fff;
+    color: #333; /* Change text color to dark for better contrast on white background */
     text-decoration: none;
     font-weight: bold;
+    white-space: nowrap; /* Prevent text from wrapping */
 }
 
 .hero {
-    background: #77aaff;
-    color: #fff;
+    background: #ffffff; /* Set hero background to white */
+    color: #333;
     padding: 60px 0;
     text-align: center;
 }
 
 .latest-news {
     padding: 20px 0;
+    background: #ffffff; /* Set latest news background to white */
 }
 
 .latest-news .news-item {
-    background: #fff;
+    background: #ffffff; /* Set news item background to white */
     border: 1px solid #ddd;
     margin: 10px 0;
     padding: 10px;
 }
 
 footer {
-    background: #333;
-    color: #fff;
+    background: #ffffff; /* Set footer background to white */
+    color: #333;
     text-align: center;
     padding: 20px 0;
 }
