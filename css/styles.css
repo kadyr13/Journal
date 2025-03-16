@@ -77,3 +77,25 @@ footer {
     text-align: center;
     padding: 20px 0;
 }
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column; /* Stack elements vertically on small screens */
+        align-items: flex-start;
+    }
+
+    header .logo {
+        margin-bottom: 10px; /* Add space between logo and navigation */
+    }
+
+    header nav ul {
+        flex-direction: column; /* Stack navigation items vertically */
+        align-items: flex-start;
+        width: 100%;
+    }
+
+    header nav ul li {
+        margin-left: 0;
+        margin-bottom: 10px; /* Add space between navigation items */
+    }
+}

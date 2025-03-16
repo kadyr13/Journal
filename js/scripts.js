@@ -1,4 +1,3 @@
-// JavaScript code will go here
 $(document).ready(function () {
     $('nav a').on('click', function (e) {
         e.preventDefault();
