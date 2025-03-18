@@ -4,6 +4,7 @@
 
 body {
     font-family: Arial, sans-serif;
+    font-size: 18px; /* Larger text size */
     margin: 0;
     padding: 0;
     background-color: #ffffff; /* Set the background color to white */
@@ -19,83 +20,133 @@ body {
 header {
     background: #ffffff; /* Set header background to white */
     color: #333;
-    padding: 20px 0;
+    padding: 10px 0; /* Smaller padding */
     display: flex; /* Ensures header uses flexbox for alignment */
     align-items: center; /* Align items in the center vertically */
     justify-content: space-between; /* Space out logo and nav */
+    position: fixed; /* Make header stay in browser window */
+    top: 0;
+    width: 100%;
+    z-index: 1000;
 }
 
-header .logo img {
-    height: auto;
-    max-height: 50px; /* Ensures the logo is not too large */
-    width: auto; /* Keeps the image aspect ratio */
-    padding: 5px; /* Adds some spacing around the logo */
-}
+    header .logo img {
+        height: auto;
+        max-height: 40px; /* Default logo size */
+        width: auto; /* Keeps the image aspect ratio */
+    }
 
-header nav ul {
+.horizontal-nav {
+    display: flex;
+    justify-content: flex-end;
     list-style: none;
-    margin: 0;
     padding: 0;
-    display: flex; /* Ensures the list items are displayed inline */
-    justify-content: flex-end; /* Align navigation items to the right */
-    flex-grow: 1; /* Allow the nav to grow and take available space */
+    margin: 0; /* Remove default margin */
 }
 
-header nav ul li {
-    margin-left: 20px;
-}
+    .horizontal-nav li {
+        margin-left: 20px; /* Larger margin */
+    }
 
-header nav ul li a {
-    color: #333; /* Change text color to dark for better contrast on white background */
-    text-decoration: none;
-    font-weight: bold;
-    white-space: nowrap; /* Prevent text from wrapping */
+        .horizontal-nav li a {
+            color: #333; /* Change text color to dark for better contrast on white background */
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 16px; /* Larger text size for nav items */
+            white-space: nowrap; /* Prevent text from wrapping */
+        }
+
+main {
+    padding-top: 80px; /* Add padding-top to ensure content is not hidden under the fixed header */
 }
 
 .hero {
     background: #ffffff; /* Set hero background to white */
     color: #333;
-    padding: 60px 0;
+    padding: 60px 0; /* Adjusted padding */
     text-align: center;
+    font-size: 18px; /* Larger text size */
 }
 
 .latest-news {
-    padding: 20px 0;
+    padding: 20px 0; /* Larger padding */
     background: #ffffff; /* Set latest news background to white */
 }
 
-.latest-news .news-item {
-    background: #ffffff; /* Set news item background to white */
-    border: 1px solid #ddd;
-    margin: 10px 0;
-    padding: 10px;
-}
+    .latest-news .news-item {
+        background: #ffffff; /* Set news item background to white */
+        border: 1px solid #ddd;
+        margin: 10px 0; /* Larger margin */
+        padding: 20px; /* Larger padding */
+        font-size: 18px; /* Larger text size */
+    }
 
 footer {
     background: #ffffff; /* Set footer background to white */
     color: #333;
     text-align: center;
-    padding: 20px 0;
+    padding: 20px 0; /* Larger padding */
+    font-size: 16px; /* Larger text size */
 }
 
+.photo-gallery {
+    text-align: center;
+    margin-top: 20px; /* Larger margin */
+}
+
+.photo-row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px; /* Increased gap between images */
+}
+
+.photo-container {
+    border: 2px solid black; /* Black quadrilateral */
+    width: calc(100% / 6 - 10px); /* Adjust the width as needed */
+    height: 100px; /* Smaller constant height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden; /* Ensure the images fit within the container */
+}
+
+    .photo-container img {
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: cover; /* Ensure the image covers the container */
+    }
+
+/* Responsive design for tablets */
 @media (max-width: 768px) {
-    header {
-        flex-direction: column; /* Stack elements vertically on small screens */
-        align-items: flex-start;
+    .photo-container {
+        width: calc(100% / 3 - 10px); /* 3 photos per row on tablets and small screens */
     }
 
-    header .logo {
-        margin-bottom: 10px; /* Add space between logo and navigation */
+    .horizontal-nav {
+        flex-direction: column; /* Stack nav items vertically */
+        align-items: flex-start; /* Align nav items to the start */
     }
 
-    header nav ul {
-        flex-direction: column; /* Stack navigation items vertically */
-        align-items: flex-start;
-        width: 100%;
+        .horizontal-nav li {
+            margin-left: 0;
+            margin-top: 10px; /* Add margin between stacked nav items */
+        }
+}
+
+/* Responsive design for mobile devices */
+@media (max-width: 480px) {
+    .photo-container {
+        width: calc(100% / 2 - 10px); /* 2 photos per row on mobile devices */
     }
 
-    header nav ul li {
-        margin-left: 0;
-        margin-bottom: 10px; /* Add space between navigation items */
+    .horizontal-nav {
+        flex-direction: column; /* Stack nav items vertically */
+        align-items: flex-start; /* Align nav items to the start */
     }
+
+        .horizontal-nav li {
+            margin-left: 0;
+            margin-top: 10px; /* Add margin between stacked nav items */
+        }
 }
