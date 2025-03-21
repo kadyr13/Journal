@@ -32,7 +32,7 @@ header {
 
     header .logo img {
         height: auto;
-        max-height: 40px; /* Default logo size */
+        max-height: 60px; /* Default logo size increased */
         width: auto; /* Keeps the image aspect ratio */
     }
 
@@ -55,6 +55,11 @@ header {
             font-size: 16px; /* Larger text size for nav items */
             white-space: nowrap; /* Prevent text from wrapping */
         }
+
+            /* Highlight the current page */
+            .horizontal-nav li a.current {
+                color: #007bff; /* Change to a different color */
+            }
 
 main {
     padding-top: 80px; /* Add padding-top to ensure content is not hidden under the fixed header */
@@ -132,6 +137,10 @@ footer {
             margin-left: 0;
             margin-top: 10px; /* Add margin between stacked nav items */
         }
+
+    header .logo img {
+        max-height: 50px; /* Adjust logo size for tablets */
+    }
 }
 
 /* Responsive design for mobile devices */
@@ -149,4 +158,8 @@ footer {
             margin-left: 0;
             margin-top: 10px; /* Add margin between stacked nav items */
         }
+
+    header .logo img {
+        max-height: 40px; /* Adjust logo size for mobile devices */
+    }
 }
